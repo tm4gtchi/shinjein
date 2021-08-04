@@ -23,7 +23,6 @@ const Gray = () => {
         <div className="project_">
           <img className="project__img" src={sg} alt="sg_alt" />
         </div>
-        <div className="project_">errorsnake</div>
       </div>
     </div>
     </>
