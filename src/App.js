@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
+import Main from './components/Main'
 
 function App() {
   return (
-    <h1 className="text-4xl font-bold">hello world</h1>
+    <Main />
   );
 }
 
