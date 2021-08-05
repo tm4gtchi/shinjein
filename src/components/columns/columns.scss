@@ -1,30 +1,44 @@
 // Green and Gray columns
-.columns__gray {
-  background-color: #cccfc8;
+.columns {
   height: 100vh;
-  overflow: scroll;
-  overflow-x: hidden;
+
+  &__gray {
+    @extend .columns;
+    background-color: #cccfc8;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  &__green {
+    @extend .columns;
+    position: relative;
+    background-attachment: fixed;
+    border-right: 4px solid #61ff41;
+    border-left: 4px solid #61ff41;
+    background-color: white;
+    width: auto;
+  }
+
 }
 
-.gray__content {
+.gray {
 
-display: flex;
-flex-direction: column;
-align-items: center;
-  padding-top: 3rem;
-  width: 80%;
-  margin: auto;
-  height: auto;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    width: 90%;
+    margin: auto;
+    height: auto;
+  }
+
 }
 
-.project_{
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
+.green {
 
-.project__img {
-  border: 1px black solid;
-  max-width: auto;
+  &__content {
+
+  }
 }
 
 .projects__title {
@@ -34,27 +48,27 @@ align-items: center;
   position: fixed;
   top: 0;
   z-index: 100;
+
+}
+.project {
+  border: 1px black solid;
+  max-width: auto;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
 }
 
-.columns__green {
-  position: relative;
-  background-attachment: fixed;
-  border-right: 4px solid #61ff41;
-  border-left: 4px solid #61ff41;
-  background-color: white;
-  height: 100vh;
-  width: auto;
-}
 
-/* width */
+
 ::-webkit-scrollbar {
   width: 5px;
+
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   z-index: 0;
   border-radius: 10px;
+
 }
 
 .name {
@@ -62,6 +76,7 @@ align-items: center;
   position:fixed;
   letter-spacing: 5px;
   margin-left: -68px;
+
 }
 
 .letter__i{
@@ -71,17 +86,20 @@ align-items: center;
   width: 4px;
   height: 68px;
   background-color: black;
+
 }
 
-.contact__main {
-  position: fixed;
-  bottom: 0;
-  padding: 10px;
-}
-.contact__title {
-  margin-top: 70%;
-}
+.contact {
+  &__main {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+  }
+  &__title {
+    margin-top: 70%;
+  }
+  &__details {
+    margin-top: 1rem;
+  }
 
-.contact__details {
-  margin-top: 1rem;
 }
