@@ -3,30 +3,21 @@ import Gray from './columns/Gray'
 import Green from './columns/Green'
 import './styles.scss';
 
-import feed_ico from './assets/feed_logo.ico'
-
-
 const Main = () => {
 
-  const [isShown, setIsShown] = useState(false);
+  const [ thisProject, setThisProject ] = useState('');
 
-  const showItem = () => {
-    setIsShown(true);
+  const project = (e) => {
+    setThisProject(e)
   }
-  const hideItem = () => {
-    setIsShown(false);
-  }
-
+  
   return (
     <>
     <div className="columns__main">
       <div className="grid sm:grid-cols-2 md:grid-cols-8 md:gap-2">
         <div className="column__empty"></div>
-          <Green 
-            feed={isShown}
-            econ={isShown} />
-          <Gray 
-            show={showItem} hide={hideItem} />
+          <Green state={thisProject} />
+          <Gray projectName={project} />
         <div className="column__empty"></div>
       </div>
     </div>

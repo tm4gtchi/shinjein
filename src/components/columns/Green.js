@@ -3,22 +3,35 @@ import './columns.scss';
 import Name from './Name'
 import Contact from './Contact'
 
-import feed_ico from '../assets/feed_logo.ico'
-import econ_ico from '../assets/econ_ico.ico'
-// import sg from '../assets/assessment.png'
-// import error from '../assets/error.png'
+import feedLogo from '../assets/feed_logo.png'
+import econLogo from '../assets/econ_logo.png'
+import noLogo from '../assets/no_logo.png'
+import errLogo from '../assets/err_logo.png'
 
-const Green = (props) => {
+const Green = ({ state }) => {
 
-  const [ feedToggle, setFeedToggle ] = useState(props.feed)
-  const [ econToggle, setEconToggle ] = useState(props.econ)
+  const handleProjectInfo = () => {
+    if( state === null) {
+      return(
+        <div>nothing</div>
+      )} if ( state === 'feed'){
+        return (<img src={feedLogo} alt="fee-log" />)
+      } if ( state === 'econtacts') {
+        return (<img src={econLogo} alt="eco-log"/>)
+      } if ( state === 'errorsnake') {
+        return (<img src={errLogo} alt="err-log"/>)
+      } if (state === 'sg-ui') {
+        return (<img src={noLogo} alt="no-log"/>)
+      }
+    }
+
 
   return (
     <>
       <div className="columns__green col-span-3 hidden md:block">
         <div className="green__content">
-          {feedToggle && (<img src={feed_ico} alt="ico"/>)}
-          {econToggle && (<img src={econ_ico} alt="ico"/>)}
+          {handleProjectInfo()}
+          {/* <img src={econ_ico} alt="ico"/> */}
         </div>
         <Name />
         <Contact />
