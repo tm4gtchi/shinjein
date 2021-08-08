@@ -1,5 +1,5 @@
 import React from 'react';
-import './columns.scss';
+import './text.scss';
 
 const Contact = () => {
   return (

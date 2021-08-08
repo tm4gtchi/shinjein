@@ -1,0 +1,32 @@
+.name {
+  margin-top: 2rem;
+  position:fixed;
+  letter-spacing: 5px;
+  margin-left: -68px;
+
+}
+
+.letter__i{
+  position: relative;
+  margin-left: 63px;
+  margin-top: -4.5rem;
+  width: 4px;
+  height: 68px;
+  background-color: black;
+
+}
+
+.contact {
+  &__main {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+  }
+  &__title {
+    margin-top: 70%;
+  }
+  &__details {
+    margin-top: 1rem;
+  }
+
+}

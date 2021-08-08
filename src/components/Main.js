@@ -16,7 +16,7 @@ const Main = () => {
     <div className="columns__main">
       <div className="grid sm:grid-cols-2 md:grid-cols-8 md:gap-2">
         <div className="column__empty"></div>
-          <Green state={thisProject} />
+          <Green main_state={thisProject} />
           <Gray projectName={project} />
         <div className="column__empty"></div>
       </div>

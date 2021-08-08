@@ -1,6 +1,6 @@
 import React from 'react';
 import './columns.scss';
-
+  //Assets
 import feed from '../assets/feed.png'
 import econtacts from '../assets/econtacts.png'
 import sg from '../assets/assessment.png'
@@ -38,6 +38,15 @@ const Gray = ({ projectName }) => {
             onMouseEnter={ (e) => {projectName('errorsnake')} }
             onMouseLeave={ (e) => {projectName(null)} }>
             <img className="err__img" src={error} alt="error_alt" />
+          </a>
+        </div>
+    {/* snail.eml */}    
+        <div className=" project">
+          <a className="snail__lnk" 
+            href="https://github.com/tm4gtchi/eml-xp-server"
+            onMouseEnter={ (e) => {projectName('snail')} }
+            onMouseLeave={ (e) => {projectName(null)} }>
+            <div className="snail__img">no photo</div>
           </a>
         </div>
     {/* SG ASSESSMENT */}    
