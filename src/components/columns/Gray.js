@@ -26,7 +26,7 @@ const Gray = ({ projectName }) => {
         <div className="project">
           <a className="econ__lnk" 
             href="https://priceless-curran-b897b6.netlify.app/"
-            onMouseEnter={ (e) => {projectName('econtacts')} }
+            onMouseEnter={ (e) => {projectName('e-contacts')} }
             onMouseLeave={ (e) => {projectName(null)} }>
             <img className="econ__img" src={econtacts} alt="econtacts_alt" />
           </a>
@@ -35,25 +35,25 @@ const Gray = ({ projectName }) => {
         <div className="project">
           <a className="err__lnk" 
             href="https://silly-elion-9ad6dd.netlify.app/"
-            onMouseEnter={ (e) => {projectName('errorsnake')} }
+            onMouseEnter={ (e) => {projectName('error snake 98')} }
             onMouseLeave={ (e) => {projectName(null)} }>
             <img className="err__img" src={error} alt="error_alt" />
           </a>
         </div>
     {/* snail.eml */}    
-        <div className=" project">
+        {/* <div className=" project">
           <a className="snail__lnk" 
             href="https://github.com/tm4gtchi/eml-xp-server"
             onMouseEnter={ (e) => {projectName('snail')} }
             onMouseLeave={ (e) => {projectName(null)} }>
             <div className="snail__img">no photo</div>
           </a>
-        </div>
+        </div> */}
     {/* SG ASSESSMENT */}    
         <div className=" project">
           <a className="sg-ui" 
             href="http://sg-tm4gtch.herokuapp.com/"
-            onMouseEnter={ (e) => {projectName('sg-ui')} }
+            onMouseEnter={ (e) => {projectName('technical assessment - studio graphene')} }
             onMouseLeave={ (e) => {projectName(null)} }>
             <img className="sg__img" src={sg} alt="sg_alt" />
           </a>
