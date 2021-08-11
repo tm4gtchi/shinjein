@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import project_data from './project-data'
 
+import none from "../assets/logo-idea.png"
+
 const Project = ({ green_state }) => {
 
   const [ projectData, setProjectData ] = useState();
@@ -21,10 +23,10 @@ const Project = ({ green_state }) => {
       )} 
     if(green_state) {
       const project = projectData.filter((the) => the.title === green_state)[0];
-      // console.log("selected project", project)
-      return( 
+      console.log("image", none);
+     return( 
         <>
-    
+
         <div className="project-info__main">
             <h4 className="project-info__title">{project.title}</h4>
              <div className="project-info__blurb">

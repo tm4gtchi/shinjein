@@ -52,7 +52,7 @@ const Gray = ({ projectName }) => {
     {/* SG ASSESSMENT */}    
         <div className=" project">
           <a className="sg-ui" 
-            href="http://sg-tm4gtch.herokuapp.com/"
+            href="https://github.com/tm4gtchi/sg-client"
             onMouseEnter={ (e) => {projectName('technical assessment - studio graphene')} }
             onMouseLeave={ (e) => {projectName(null)} }>
             <img className="sg__img" src={sg} alt="sg_alt" />
