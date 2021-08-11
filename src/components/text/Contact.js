@@ -5,8 +5,10 @@ const Contact = () => {
   return (
     <>
       <div className="contact__main">
-        <h2 className="contact__title">fullstack developer</h2>
-        <p>mern stack  berlin, germany</p>
+        <div className="contact__heading">
+          <h2 className="contact__title">fullstack developer</h2>
+          <p>MERN | berlin, germany</p>
+        </div>
         <div className="contact__details">
           <ul>
             <li>g: @tm4gtchi</li>

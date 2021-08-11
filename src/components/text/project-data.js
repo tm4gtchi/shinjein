@@ -1,7 +1,7 @@
 const project_data = [
   {
       title: "feed",
-      description: "a photo-sharing web app all about the joy of simple, memorable meals. feed was inspired by our favorite go-to recipes and how we learned to cook them: through friends and family. built in collaboration with Stefano Pisani. ",
+      description: "a photo-sharing app about the joy of simple, memorable meals. feed was inspired by our favorite go-to recipes and how we learned to cook them: through friends and family. built in collaboration with Stefano Pisani. ",
       features: "CRUD operations for posts, create and edit user profile, create favorites list, keyword search bar, random recipe generator, chronological feed",
       design: "feed was designed so anonymous users can still get recipe ideas. We incorporated ideas from several popular social media apps, such as instagram and reddit, to inspire a user-friendly app. ",
       technologies: "node | mongoose | express | mongoDB | handlebars ",
@@ -18,14 +18,16 @@ const project_data = [
   { 
       title: "error snake 98",
       description: "a classic snake game inspired by those unsettling errors (or were they viruses?) from old windows computers",
-      features: "",
+      features: "first project using javascript animations.",
+      design: "Knowing my first project might not have great graphics, I conceptualized the game aesthetic based on something that already appears flawed: the accordion affect of windows when there is a virus or severe lag.",
       technologies: "canvas | javascript ",
       file: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABLCAYAAADNsPFaAAACvUlEQVR4Xu2cMXbCMAxAndNwhHYjI2OPkw3YcgW2HKEjY9h6BTZukj4F1Ag/m9jUlp1YmQoJSfz5kmyR16ppmkHJ9kSgbVtVAZi2/RI0DwJN860EjEEHAWOJEQFTCphh+Hg7T1ZVpZT6GT+/OmMAzO1284bTdZ06Ho/rB+MLp+/7ssDAgGGr6/rJIv394sAADRMEeP9wOIywYH+RYCgc1IZCwf3F5hg0R4dSNBiEgsaYck5xxuimoDEUTnE5xhY+UpVIqbaFU9FVaW4qXEQoYQ6Zg6HvX3XyVerTl4d2/EoXkf+k8vfx1a2uBUwoAi6Nqt1uF/lyyzn9+XyemuECZvriBIxFYgEjYPzymxgjxizUmL6fmtV1fW9gp9yyCCWAst/fMVwu/djR11sE3JCSg6FQcPAI53Q6qc1mw81kvF6WYODG4NdSAANbCjhJwZhsMVmTAk62YFJbkwzMK1tysCZrMCmtSQLGxZbU1mQBBsszwoA5zHY7TfhSVCh2MCZbxgeZtG0gD9fSeQ1XhVoEmBS5hhWMLbfMGUOXClyTvsWA4baGDcyrSuRiDLc1WYCBhyUfT32NKRj+xtW2npS5KhQLmLl5y1y5pnC4KlQWYDB/IABaqk09Bw5rooOZswUHjuH0Kow4Z8PZgKGdOzrrtXWpYlsTFYyrLTh4GOxcGHFZkxUYmx0prIkGxtcWWpn0RaQNTMwKlQ0YfZLnGlKxck0UML626OUaXruCiWVNNmDeCSWatEMvLrMB45t46fE0nEL1axYPRg+lrMHAzb2TZ3ytMUHJHgzCoatm34G7HI+5hR4b4pfLKKGkD+h6vbqMMcgxIaDAjbCAgQtxwAkFhRVMEB0YT8JmDOOYglxKwFgwChgB4xdhYowYI8b4ERBj/HhJjhFjxBg/Ai7GBDnjik4y/h886D+vaEzBhvILucG+LuXZ6FAAAAAASUVORK5CYII="
   },
   {   
       title: "technical assessment - studio graphene",
-      description: "front-end technical test presented as part of a successful junior application. Showcases react and sass ability, along with first experiences using  unit testing.",
-      features: "applicants were given a video of a single-page app with seven sections, three of which are animated as the page scrolls. Junior applicants are asked to recreate two of the sections, one of which should be animated.",
+      description: "front-end technical test presented as part of a successful junior application for an international digital product company headquartered in London.",
+      features: "My application showcases parallax scroll effect in two sections, map render, and react and sass abilities. First experiences using  unit testing. ",
+      design: "applicants were given a video of a single-page app with seven sections, three of which are animated as the page scrolls. Junior applicants are asked to recreate two of the sections, one of which should be animated.",
       technologies: "react | react hooks | sass | unit testing | parallax scroll | adobe xd ",
       file: "/static/media/no_logo.7771b03e.png"
   }
