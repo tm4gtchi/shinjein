@@ -17,6 +17,10 @@ const Project = ({ green_state }) => {
       // setStateMatch(state);
       // const statesMatch = projectData.some(the => the.title.includes(green_state))
   }
+  
+  useEffect(() => {
+    handleStates();
+  }, []);
 
   const renderProjectInfo = () => {
 
@@ -41,10 +45,6 @@ const Project = ({ green_state }) => {
         </>
       )
     }}
-
-  useEffect(() => {
-    handleStates();
-  }, []);
 
   return(
     <div>
