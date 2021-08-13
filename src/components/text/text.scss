@@ -127,12 +127,11 @@
     margin-bottom: 1rem;
     margin-left: 1rem;
   }
+      &__carrots {
+        font-weight: 300;
+      }
 
-  &__carrots {
-    font-weight: 300;
-  }
-
-}
+    }
 
 .item-enter {
   opacity: 0;

@@ -50,19 +50,19 @@
 .project {
   max-width: auto;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
 }
 
 ::-webkit-scrollbar {
   width: 5px;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
 }
 
 ::-webkit-scrollbar-track {
   z-index: 0;
   border-radius: 10px;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
 }

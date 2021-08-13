@@ -13,17 +13,15 @@ const Main = () => {
   }
   
   return (
-    <>
     <div className="columns__main">
       <div className="grid sm:grid-cols-2 md:grid-cols-8 md:gap-2">
-        <div className="column__empty"></div>
+        <div className="columns__empty"></div>
           <Green main_state={thisProject} />
           <Gray projectName={project} />
-        <div className="column__empty"></div>
+        <div className="columns__empty"></div>
       </div>
     </div>
-    </>
-    );
+  );
 }
 
 export default Main;

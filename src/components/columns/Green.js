@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import './columns.scss';
 
@@ -6,10 +7,9 @@ import './columns.scss';
 import Project from '../text/ProjectInfo'
 import Name from '../text/Name';
 import Contact from '../text/Contact';
+import About from '../switches/About'
 
 const Green = ({ main_state }) => {
-
-  const [ showProject, setShowProject ] = useState(false);
 
 
   return (
@@ -17,7 +17,10 @@ const Green = ({ main_state }) => {
         <div className="green__content">
         <Name />
         <Contact />
-          <Project green_state={main_state}/>
+        <Project green_state={main_state}/>
+        <Switch>
+          <Route key="/about" exact path="/about" component={About}/>
+        </Switch>
         </div>
       </div>
     );
