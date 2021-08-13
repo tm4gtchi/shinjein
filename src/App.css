@@ -7,11 +7,10 @@ body {
  
   background: white;
   background-image: 
-    linear-gradient(#c2c2c2 1px, transparent 1px), 
-    linear-gradient(90deg, #c2c2c2 1px, transparent 1px);
+    linear-gradient(#e9f0e9 1px, transparent 1px), 
+    linear-gradient(90deg, #e9f0e9 1px, transparent 1px);
       display: flex;
   background-size: 1em 1em;
   background-attachment: fixed;
-  scroll-behavior: smooth;
 
 }

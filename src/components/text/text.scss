@@ -1,17 +1,23 @@
 .project-info {
-  
+
   &__main {
+    @media screen and (max-width: 1000px) {
+      p  {
+        font-size: 11px;
+        line-height: 10px;
+        margin: 0.5rem;
+      }
+    }
+    
     margin: auto;
-    margin-top: 5vh;
+    margin-top: 6vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 80%;
-    max-height: 50%;
+    max-width: 85%;
+    max-height: 60vh;
     z-index: 100;
     padding: 20px;
-    border: 0.3px rgba(33, 0, 218, 0.249) dotted;
-    box-shadow: rgba(31, 1, 200, 0.091) 0px 40px 90px 0px;    
     
     p {
       font-family: "Helvetica";
@@ -43,18 +49,17 @@
   }
 
   &__logo {
-    max-width: 60px;
+    max-width: 50px;
     margin-right: .8rem;
     margin-bottom: .8rem;
     margin-top: .8rem;
   }
 
   &__text {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
-    letter-spacing: .5px;
     margin-bottom: 1rem;
-   color:rgb(70, 70, 70)
+    color:rgb(70, 70, 70)
   }
   
   &__tech {
@@ -67,26 +72,30 @@
 }
 
 .name {
-  margin-top: 2vh;
+  top: 0;
+  font-weight: 200;
+  color:rgba(34, 159, 0, 0.406);
   position: relative;
-  letter-spacing: 5px;
-  margin-left: -68px;
+  letter-spacing: 6px;
+  margin-left: -69px;
 
 }
 
 .letter__i{
   position: relative;
-  margin-left: 63px;
+  margin-left: 67px;
   margin-top: -4.5rem;
-  width: 4px;
-  height: 68px;
-  background-color: black;
+  width: 1px;
+  height: 65px;
+  background-color: rgba(34, 159, 0, 0.214);
+  
 
 }
 
 .contact {
 
-  &__heading {
+  &__heading { 
+    font-weight: 200;
     position: absolute;
     top: 0;
     right: 0;
@@ -96,11 +105,31 @@
   }
 
   &__details {
+    width: 20%;
+    font-weight: 200;
     position: absolute;
     bottom: 0;
-    padding-bottom: 2vh;
-    padding-left: 2vh;
+    padding-bottom: 1vh;
 
+  }
+
+  &__ul {
+    font-size: 16px;
+    margin-left: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+  &__icon {
+    max-width: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  &__carrots {
+    font-weight: 300;
   }
 
 }

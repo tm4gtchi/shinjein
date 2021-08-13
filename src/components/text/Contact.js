@@ -1,6 +1,8 @@
 import React from 'react';
 import './text.scss';
 
+import coffee from '../../assets/coffee.svg'
+
 const Contact = () => {
   return (
     <>
@@ -10,10 +12,10 @@ const Contact = () => {
           <p>MERN | berlin, germany</p>
         </div>
         <div className="contact__details">
-          <ul>
-            <li>g: @tm4gtchi</li>
-            <li>t: +49 0 176 57735999</li>
-            <li>e: jshin724@gmail.com</li>
+          <ul className="contact__ul">
+            <li className="contact__icon">
+              <img src={coffee} alt="coffee_icon"/></li>
+            <li className="contact__carrots"> &lt; / &gt; </li>
           </ul>
       </div>
       </div>

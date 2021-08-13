@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import project_data from './project-data'
 
-import none from "../assets/logo-idea.png"
+import none from "../../assets/logo-idea.png"
 
 const Project = ({ green_state }) => {
 

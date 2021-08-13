@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Gray from './columns/Gray'
 import Green from './columns/Green'
+
 import './styles.scss';
 
 const Main = () => {

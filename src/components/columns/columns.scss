@@ -1,21 +1,23 @@
 // Green and Gray columns
 .columns {
   height: 100vh;
+  margin-left: 1rem;
 
   &__gray {
     @extend .columns;
     background-color: #cccfc8;
     overflow: scroll;
     overflow-x: hidden;
+
   }
+
   &__green {
     @extend .columns;
     position: relative;
     background-attachment: fixed;
-    border-right: 4px solid #61ff41;
-    border-left: 4px solid #61ff41;
     background-color: white;
     width: auto;
+    box-shadow:  rgba(71, 222, 48, 0.351) 0px 2px 6px 2px;
   }
 
 }
@@ -36,7 +38,7 @@
 
 
 .projects__title {
-  writing-mode: revert;
+
   right: 13%;
   color: white;
   position: fixed;
@@ -44,23 +46,23 @@
   z-index: 100;
 
 }
+
 .project {
-  border: 1px black solid;
   max-width: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
 
 }
 
-
-
 ::-webkit-scrollbar {
   width: 5px;
+    scroll-behavior: smooth;
 
 }
 
 ::-webkit-scrollbar-track {
   z-index: 0;
   border-radius: 10px;
+    scroll-behavior: smooth;
 
 }

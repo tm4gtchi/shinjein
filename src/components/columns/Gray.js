@@ -1,10 +1,10 @@
 import React from 'react';
 import './columns.scss';
   //Assets
-import feed from '../assets/feed.png'
-import econtacts from '../assets/econtacts.png'
-import sg from '../assets/assessment.png'
-import error from '../assets/error.png'
+import feed from '../../assets/feed.png'
+import econtacts from '../../assets/econtacts.png'
+import sg from '../../assets/assessment.png'
+import error from '../../assets/error.png'
 
 const Gray = ({ projectName }) => {
 
