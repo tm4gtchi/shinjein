@@ -1,5 +1,6 @@
 import React from 'react';
 import './columns.scss';
+
   //Assets
 import feed from '../../assets/feed.png'
 import econtacts from '../../assets/econtacts.png'
@@ -9,7 +10,6 @@ import error from '../../assets/error.png'
 const Gray = ({ projectName }) => {
 
   return (
-    <>
     <div className="columns__gray col-span-3">
       <h1 className="projects__title">projects</h1>
       <div className="gray__content grid-rows-3 gap-4">
@@ -60,7 +60,6 @@ const Gray = ({ projectName }) => {
         </div>
       </div>
     </div>
-    </>
     );
 }
 

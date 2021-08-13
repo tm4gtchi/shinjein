@@ -1,20 +1,25 @@
-import React, { useState, useEffect } from "react";
-import project_data from './project-data'
-
-import none from "../../assets/logo-idea.png"
+import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import project_data from './project-data';
+import './text.scss'
 
 const Project = ({ green_state }) => {
 
   const [ projectData, setProjectData ] = useState();
+  const [ showProject, setShowProject ] = useState(false);
 
   useEffect(() => {
       const handleStates = () => {
         const data = Object.values(project_data);
         setProjectData(data);
+        if(green_state) {
+          setShowProject(true)
+        } else {
+          setShowProject(false)
+        }
       }
     handleStates();
-  }, []);
-
+  }, [green_state]);
 
   const renderProjectInfo = () => {
     if(!green_state) {
@@ -23,9 +28,13 @@ const Project = ({ green_state }) => {
       )} 
     if(green_state) {
       const project = projectData.filter((the) => the.title === green_state)[0];
-      console.log("image", none);
      return( 
-        <>
+       <CSSTransition
+        in={showProject}
+        timeout={300}
+        unmountOnExit
+        classNames="item"
+        >
 
         <div className="project-info__main">
             <h4 className="project-info__title">{project.title}</h4>
@@ -33,11 +42,11 @@ const Project = ({ green_state }) => {
               <img className="project-info__logo" src={project.file} alt="logo" /> 
               <p className="project-info__description">{project.description}</p>
              </div>
-             <p className="project-info__text">{project.features}</p>
-             <p className="project-info__text">{project.design}</p>
-             <p className="project-info__tech">{project.technologies}</p>
+              <p className="project-info__text">{project.features}</p>
+              <p className="project-info__text">{project.design}</p>
+              <p className="project-info__tech">{project.technologies}</p>
         </div>
-        </>
+       </CSSTransition>
       )
     }}
 
