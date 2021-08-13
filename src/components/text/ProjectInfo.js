@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import project_data from './project-data';
 import './text.scss'
 
-const Project = ({ green_state }) => {
+const Project = ({ green_state, block_status }) => {
 
   const [ projectData, setProjectData ] = useState();
   const [ showProject, setShowProject ] = useState(false);
@@ -22,7 +22,7 @@ const Project = ({ green_state }) => {
   }, [green_state]);
 
   const renderProjectInfo = () => {
-    if(!green_state) {
+    if(!green_state || block_status) {
       return(
         <div></div>
       )} 
@@ -35,7 +35,6 @@ const Project = ({ green_state }) => {
         unmountOnExit
         classNames="item"
         >
-
         <div className="project-info__main">
             <h4 className="project-info__title">{project.title}</h4>
              <div className="project-info__blurb">

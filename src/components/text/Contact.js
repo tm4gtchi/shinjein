@@ -4,7 +4,7 @@ import './text.scss';
 
 import coffee from '../../assets/coffee.svg'
 
-const Contact = () => {
+const Contact = ({block_func}) => {
   return (
     <div className="contact__main">
       <div className="contact__heading">
@@ -15,6 +15,7 @@ const Contact = () => {
         <ul className="contact__ul">
           <li className="contact__icon">
               <NavLink to="/about"
+                onClick={ (e) => {block_func(true)} }
                 className="contact__icon_img">
                 <img src={coffee} alt="coffee_icon"/>
               </NavLink>
