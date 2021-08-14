@@ -28,7 +28,6 @@ const About = ({block_func}) => {
           <div>
             <p className="about__blurb"> 
               My ongoing curiosity for language, form, and space are what led me to software development.
-              After realizing that the creative possibilites of programming were well in reach, my intrigue for technology grew exponentially. 
               Since then, I've been building, learning, and designing using react and node mostly, but interested in really anything 
               related to the field. 
             </p>   
