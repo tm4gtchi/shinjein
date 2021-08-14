@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import project_data from './project-data';
+
 import './text.scss'
 
-const Project = ({ green_state, block_status }) => {
+const Project = ({ green_state, block_status, parent_render }) => {
 
   const [ projectData, setProjectData ] = useState();
   const [ showProject, setShowProject ] = useState(false);
@@ -26,7 +27,7 @@ const Project = ({ green_state, block_status }) => {
       return(
         <div></div>
       )} 
-    if(green_state) {
+    if(green_state && parent_render) {
       const project = projectData.filter((the) => the.title === green_state)[0];
      return( 
        <CSSTransition

@@ -9,13 +9,14 @@ const Main = () => {
   const [ thisProject, setThisProject ] = useState('');
   const [ block, setBlock ] = useState(false);
 
+  
   const project = (e) => {
     setThisProject(e)
   }
   const blockProject = (e) => {
     setBlock(e)
   }
-  
+
   return (
     <div className="columns__main">
       <div className="grid sm:grid-cols-2 md:grid-cols-8 md:gap-2">

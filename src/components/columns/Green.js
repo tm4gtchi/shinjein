@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import './columns.scss';
@@ -11,26 +11,44 @@ import About from '../switches/About'
 
 const Green = ({ main_state, block_status, block_func }) => {
 
+  const [ greenRender, setGreenRender ] = useState(false);
 
-  return (
-      <div className="columns__green col-span-3 hidden md:block">
-        <div className="green__content">
-        <Name />
-        <Contact 
-          block_status={block_status} 
-          block_func={block_func} />
-        <Project 
-          green_state={main_state}
-          block_status={block_status} />
-        <Switch>
-          <Route exact path="/about" render={(props) => {
-            return <About {...props}  
-            block_func={block_func}/>
-          }}/>
-        </Switch>
+  useEffect(() => {
+      const greenRender = () => {
+        setGreenRender(true)
+      }
+    greenRender();
+  }, []);
+
+  const renderGreenColumn = () => {
+    return (
+        <div className="columns__green col-span-3 hidden md:block">
+          <div className="green__content">
+          <Name />
+          <Contact 
+            block_status={block_status} 
+            block_func={block_func} />
+          <Project 
+            green_state={main_state}
+            block_status={block_status}
+            parent_render={greenRender}
+            />
+          <Switch>
+            <Route exact path="/about" render={(props) => {
+              return <About {...props}  
+              block_func={block_func}/>
+            }}/>
+          </Switch>
+          </div>
         </div>
-      </div>
-    );
+      );
+  }
+  return(
+    <>
+    {renderGreenColumn()}
+    </>
+  )
+
   }
 
 
