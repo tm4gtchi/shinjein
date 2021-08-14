@@ -17,12 +17,13 @@ const Contact = ({block_func}) => {
               <NavLink to="/about"
                 onClick={ (e) => {block_func(true)} }
                 className="contact__icon_img">
-                <img src={coffee} alt="coffee_icon"/>
+                <img className="click_me"src={coffee} alt="coffee_icon"/>
               </NavLink>
             </li>
-            <li className="contact__carrots">
+            <a href="https://github.com/tm4gtchi/shinjein" className="click_me">
+              <li className="contact__carrots">
               &lt; / &gt;
-            </li>
+            </li></a>
           </ul>
       </div>
     </div>

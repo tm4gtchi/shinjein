@@ -35,14 +35,14 @@ const About = ({block_func}) => {
           </div>
           <ul className="about__ul">
             <a href="https://github.com/tm4gtchi">
-            <li>github</li>
+            <li className="click_me">github</li>
             </a>
-            <a href="https://www.linkedin.com/in/jeein-shin/"><li>linkedin</li></a>
+            <a href="https://www.linkedin.com/in/jeein-shin/"><li className="click_me">linkedin</li></a>
           </ul>
-          <NavLink to="/"
+          <NavLink className="click_me" to="/"
               onClick={ (e) => {block_func(false)} }>
             <p className="about__home">
-              home
+              go back
             </p>
           </NavLink>
         </div>
