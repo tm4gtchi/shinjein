@@ -1,4 +1,6 @@
 # portfolio website
+14.08.21, 
+
 as of 11. 08. 21, MVP completed: 
 - art direction
 - display project info on hover 
