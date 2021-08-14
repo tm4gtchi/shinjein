@@ -1,27 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
+import { CSSTransition } from 'react-transition-group';
 import './switches.scss';
 
 const About = ({block_func}) => {
 
+  const [ showAbout, setShowAbout ] = useState(false);
+
   useEffect(() => {
       const isRendered = () => {
-        block_func(true)
+        block_func(true);
+        setShowAbout(true)
+        
       }
     isRendered();
   }, [block_func]);
 
   const renderAbout = () => {
     return (
+      <CSSTransition
+        in={showAbout}
+        timeout={300}
+        unmountOnExit
+        classNames="item"
+        >
         <div className="about__main">
           <div>
-            <p className="about__blurb">
-              I enjoy simple elegance, in both code and design, and use that as a guiding principle in all my projects.
-            </p>
             <p className="about__blurb"> 
-              In pursuit of my ongoing curiosity for language, form, and space, I became a developer. My interest began at the end of 2019,
-              when I realized programming was how we communicate with computers, a language essentially. From there, I used the resources
-              available to learn, build, an design. 
+              My ongoing curiosity for language, form, and space are what informed my career in software development. At the end of 2019,
+              after realizing that the creative possibilites of programming
+              were well in reach, my intrigue for technology grew exponentially.
+              Since then, I have pursued a non-traditional trajectory to learn, build, and design. 
             </p>   
           </div>
           <ul className="about__ul">
@@ -31,9 +40,12 @@ const About = ({block_func}) => {
           </ul>
           <NavLink to="/"
               onClick={ (e) => {block_func(false)} }>
-            back
+            <p className="about__home">
+              home
+            </p>
           </NavLink>
         </div>
+      </CSSTransition>
       );
   }
   

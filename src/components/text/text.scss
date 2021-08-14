@@ -115,11 +115,16 @@
 
   &__ul {
     font-size: 16px;
-    margin-left: 0 auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    text-align: center;
+  }
+
+  &__home {
+    font-size: 35px;
+    font-weight: 200;
   }
 
   &__icon {
@@ -127,6 +132,7 @@
     margin-bottom: 1rem;
     margin-left: 1rem;
   }
+
       &__carrots {
         font-weight: 300;
       }
