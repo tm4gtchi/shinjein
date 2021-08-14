@@ -27,16 +27,17 @@ const About = ({block_func}) => {
         <div className="about__main">
           <div>
             <p className="about__blurb"> 
-              My ongoing curiosity for language, form, and space are what informed my career in software development. At the end of 2019,
-              after realizing that the creative possibilites of programming
-              were well in reach, my intrigue for technology grew exponentially.
-              Since then, I have pursued a non-traditional trajectory to learn, build, and design. 
+              My ongoing curiosity for language, form, and space are what led me to software development.
+              After realizing that the creative possibilites of programming were well in reach, my intrigue for technology grew exponentially. 
+              Since then, I've been building, learning, and designing using react and node mostly, but interested in really anything 
+              related to the field. 
             </p>   
           </div>
           <ul className="about__ul">
+            <a href="https://github.com/tm4gtchi">
             <li>github</li>
-            <li>linkedin</li>
-            <li>email</li>
+            </a>
+            <a href="https://www.linkedin.com/in/jeein-shin/"><li>linkedin</li></a>
           </ul>
           <NavLink to="/"
               onClick={ (e) => {block_func(false)} }>
