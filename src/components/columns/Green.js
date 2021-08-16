@@ -22,7 +22,7 @@ const Green = ({ main_state, block_status, block_func }) => {
 
   const renderGreenColumn = () => {
     return (
-        <div className="columns__green col-span-3 hidden md:block">
+        <div className="columns__green col-span-4 hidden md:block">
           <div className="green__content">
           <Name />
           <Contact 

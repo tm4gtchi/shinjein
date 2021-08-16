@@ -9,7 +9,7 @@ const Main = () => {
   const [ thisProject, setThisProject ] = useState('');
   const [ block, setBlock ] = useState(false);
 
-  
+
   const project = (e) => {
     setThisProject(e)
   }
@@ -19,7 +19,7 @@ const Main = () => {
 
   return (
     <div className="columns__main">
-      <div className="grid sm:grid-cols-2 md:grid-cols-8 md:gap-2">
+      <div className="grid sm:grid-cols-2 md:grid-cols-8 md:gap-4">
         <div className="columns__empty"></div>
           <Green 
             main_state={thisProject} 

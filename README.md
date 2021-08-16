@@ -1,5 +1,5 @@
 # portfolio website
-14.08.21, 
+14.08.21, design changes
 
 as of 11. 08. 21, MVP completed: 
 - art direction
