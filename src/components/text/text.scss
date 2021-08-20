@@ -10,14 +10,13 @@
     }
     
     margin: auto;
-    margin-top: 6vh;
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 85%;
     max-height: 60vh;
     z-index: 100;
-    padding: 20px;
     
     p {
       font-family: "Helvetica";
@@ -26,6 +25,7 @@
     }
 
   }
+
   &__title {
     color: #15743351;
     font-weight: bold;
@@ -71,44 +71,40 @@
 
 }
 
-.name {
-  top: 0;
-  font-weight: 100;
-  color:rgba(0, 0, 0, 0.735);
-  position: relative;
-  letter-spacing: 4px;
-  margin-left: -60px;
-
-}
-
-
 .contact {
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
 
   &__heading { 
     font-weight: 200;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 1vw;
     padding-top: 1vh;
     padding-right: 2vh;
-    text-align: right;
+    text-align: left;
   }
 
   &__details {
+    margin-top: 1rem;
     width: 20%;
     font-weight: 200;
     position: absolute;
-    bottom: 0;
     padding-bottom: 1vh;
 
   }
 
   &__ul {
+
     font-size: 16px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     text-align: center;
   }
 
@@ -125,6 +121,7 @@
 
       &__carrots {
         font-weight: 300;
+        margin-left: 2rem;
       }
 
     }

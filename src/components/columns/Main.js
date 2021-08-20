@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Gray from './columns/Gray'
-import Green from './columns/Green'
+import Green from './Green'
+import Gray from './Gray'
 
-import './styles.scss';
+import './columns.scss';
 
 const Main = () => {
 
@@ -19,14 +19,12 @@ const Main = () => {
 
   return (
     <div className="columns__main">
-      <div className="grid sm:grid-cols-2 md:grid-cols-8 md:gap-4">
-        <div className="columns__empty"></div>
+      <div className="grid sm:grid-cols-2 md:grid-cols-5 md:gap-0">
           <Green 
             main_state={thisProject} 
             block_func={blockProject} 
             block_status={block} />
           <Gray projectName={project} />
-        <div className="columns__empty"></div>
       </div>
     </div>
   );

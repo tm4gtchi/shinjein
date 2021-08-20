@@ -1,11 +1,9 @@
 // Green and Gray columns
 .columns {
   height: 100vh;
-  margin-left: 1rem;
 
   &__gray {
     @extend .columns;
-    background-color: #cccfc8;
     overflow: scroll;
     overflow-x: hidden;
 
@@ -14,11 +12,9 @@
   &__green {
     @extend .columns;
     position: relative;
-    background-attachment: fixed;
     background-color: rgba(255, 255, 255, 0.646);
-    width: auto;
-    border-right: 0.2px rgb(25, 101, 0) solid;
-    border-left: 0.2px rgb(25, 101, 0) solid;
+    border-left: 1px rgba(81, 146, 59, 0.698) solid;
+    border-right: 1px rgba(159, 195, 146, 0.349) solid;
   }
 
 }
@@ -26,44 +22,26 @@
 .gray {
 
   &__content {
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 4rem;
-    width: 80%;
-    margin: auto;
-    height: auto;
   }
 
 }
 
 
-.projects__title {
-
-  right: 13%;
-  color: white;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-
-}
-
 .project {
-  max-width: auto;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  background-color: white;
+  border-bottom: 1px  rgba(159, 195, 146, 0.349) solid;
+  height: 50vh;
+  width: 100%;
 
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  scroll-behavior: smooth;
-
-}
-
-::-webkit-scrollbar-track {
-  z-index: 0;
-  border-radius: 10px;
-  scroll-behavior: smooth;
-
+.project_scn {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
 }
