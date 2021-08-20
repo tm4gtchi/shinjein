@@ -14,7 +14,8 @@ const Gray = ({ projectName }) => {
       <div className="gray__content">
     {/* FEED */}
         <div className="project"
-          onClick={ (e) => {projectName('feed')} }>
+          // onClick={ (e) => {projectName('feed')} }
+          >
           <div className="project__img">
           <img className="project_scn" src={feed} alt="feed_alt"
             />
@@ -22,26 +23,35 @@ const Gray = ({ projectName }) => {
         </div>
     {/* ECONTACTS */}
         <div className="project" 
-          onClick={ (e) => {projectName('e-contacts')} }>
+          // onClick={ (e) => {projectName('e-contacts')} }
+          >
+        <div className="project__img">
             <img className="project_scn" src={econtacts} alt="econtacts_alt" />
+        </div>
         </div>
     {/* ERROR SNAKE */}    
         <div className="project">
-          <a className="err__lnk" 
+          {/* <a className="err__lnk" 
             href="https://silly-elion-9ad6dd.netlify.app/"
             onMouseEnter={ (e) => {projectName('error snake 98')} }
-            onMouseLeave={ (e) => {projectName(null)} }>
+            onMouseLeave={ (e) => {projectName(null)} }
+            > */}
+          <div className="project__img">
+
             <img className="project_scn" src={error} alt="error_alt" />
-          </a>
+          </div>
+          {/* </a> */}
         </div>
     {/* SG ASSESSMENT */}    
         <div className=" project">
-          <a className="sg-ui" 
+          {/* <a className="sg-ui" 
             href="https://github.com/tm4gtchi/sg-client"
             onMouseEnter={ (e) => {projectName('technical assessment - studio graphene')} }
-            onMouseLeave={ (e) => {projectName(null)} }>
-            <img className="project_scn" src={sg} alt="sg_alt" />
-          </a>
+            onMouseLeave={ (e) => {projectName(null)} }
+            > */}
+            <div className="project__img">
+            <img className="project_scn" src={sg} alt="sg_alt" />                      </div>
+          {/* </a> */}
         </div>
       </div>
     </div>

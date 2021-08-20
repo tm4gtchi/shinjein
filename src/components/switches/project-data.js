@@ -17,7 +17,7 @@ const project_data = [
   },
   { 
       title: "error snake 98",
-      description: "a classic snake game inspired by those unsettling errors (or were they viruses?) from old windows computers",
+      description: "a classic snake game inspired by errors from old windows computers",
       features: "first project using javascript animations.",
       design: "Knowing my first project might not have great graphics, I conceptualized the game aesthetic based on something that already appears flawed: the accordion affect of windows when there is a virus or severe lag.",
       technologies: "canvas | javascript ",

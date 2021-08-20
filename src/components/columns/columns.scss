@@ -37,11 +37,18 @@
   height: 50vh;
   width: 100%;
 
+  &__img {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center
+  }
+
 }
 
 .project_scn {
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
+  display: flex;
+  max-width: 80%;
+
+
 }

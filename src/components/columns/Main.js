@@ -19,7 +19,7 @@ const Main = () => {
 
   return (
     <div className="columns__main">
-      <div className="grid sm:grid-cols-2 md:grid-cols-5 md:gap-0">
+      <div className="grid sm:grid-cols-2 md:grid-cols-4 md:gap-0">
           <Green 
             main_state={thisProject} 
             block_func={blockProject} 
