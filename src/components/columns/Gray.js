@@ -37,6 +37,7 @@ const Gray = () => {
             )}
         if(thisProject !== 'econtacts') {
           return(
+          // <EconProject />
           <EconProject />
           )}
       }
@@ -67,18 +68,20 @@ const Gray = () => {
     
   <div className="columns__gray col-span-2">
         <div className="gray__content">
+          <h3 class="gray__content__title">My Projects</h3>
       {/* FEED */}
           <div className="project">
-            <p>Feed</p>
+            <h5>Feed</h5>
             <div className="project__img" 
               onMouseEnter={ (e) => {project_name('feed')} }
-              onMouseLeave={ (e) => {project_name(null)} }>
+              //onMouseLeave={ (e) => {project_name(null)} }
+              >
             {handleFeed()}
             </div>
           </div>
       {/* ECONTACTS */}
           <div className="project">
-            <p>E-Contacts</p>
+            <h5>E-Contacts</h5>
             <div className="project__img" 
               onMouseEnter={ (e) => {project_name('econtacts')} }
               onMouseLeave={ (e) => {project_name(null)} } >

@@ -10,18 +10,13 @@
     }
     
     margin: auto;
-    margin-top: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 85%;
-    max-height: 60vh;
     z-index: 100;
     
     p {
-      font-family: "Helvetica";
-      font-weight: lighter;
-      text-align: justify;
+
     }
 
   }
@@ -42,11 +37,7 @@
   }
 
   &__description {
-    font-size: 13px;
-    line-height: 15px;
-    font-style: italic;
-    letter-spacing: 0.3px;
-    color:gray
+    font-size: 22px;
   }
 
   &__logo {
@@ -57,10 +48,7 @@
   }
 
   &__text {
-    font-size: 13px;
-    line-height: 16px;
-    margin-bottom: 1rem;
-    color:gray
+    font-size: 22px;
   }
   
   &__tech {
