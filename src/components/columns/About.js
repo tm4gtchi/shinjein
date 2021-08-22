@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group';
-import './switches.scss';
+import '../switches/switches.scss';
 
-const About = ({block_func}) => {
+const About = () => {
 
   const [ showAbout, setShowAbout ] = useState(false);
 
   useEffect(() => {
       const isRendered = () => {
-        block_func(true);
         setShowAbout(true)
         
       }
     isRendered();
-  }, [block_func]);
+  }, []);
 
   const renderAbout = () => {
     return (

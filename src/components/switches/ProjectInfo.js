@@ -7,7 +7,7 @@ import '../text/text.scss'
 const ProjectInfo = ({ container_project }) => {
 
   const [ projectData, setProjectData ] = useState(project_data);
-  const [ projectName, setProjectName ] = useState(container_project);
+  // const [ projectName, setProjectName ] = useState(container_project);
   const [ transition, setTransition ] = useState(false);
 
   useEffect(() => {
@@ -23,13 +23,11 @@ const ProjectInfo = ({ container_project }) => {
 
   const renderProjectInfo = () => {
     if(container_project) {
-      // handleStates();
-      // console.log(projectData);
-      const project = projectData.filter((the) => the.title === projectName)[0];
+      const project = projectData.filter((the) => the.title === container_project)[0];
      return( 
        <CSSTransition
         in={transition}
-        timeout={300}
+        timeout={600}
         unmountOnExit
         classNames="item"
         >

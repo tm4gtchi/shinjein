@@ -10,9 +10,7 @@ import error from '../../assets/error_snake.png'
 
 const FeedProject = () => {
   return(
-    <div className="project__img"> 
       <img className="project_scn" src={feed} alt="feed_alt"/>
-    </div>
     )
 }
 const EconProject = () => {

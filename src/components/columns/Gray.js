@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './columns.scss';
 import ProjectInfo from '../switches/ProjectInfo'
-import { FeedProject, EconProject, AssessmentProject, ErrorSnakeProject } from '../switches/Projects'
-import project_data from '../switches/project-data'
-
+import { 
+    FeedProject, 
+    EconProject, 
+    AssessmentProject, 
+    ErrorSnakeProject 
+  } from '../switches/Projects'
 
 const Gray = () => {
 
     const [ thisProject, setThisProject ] = useState(null);
-    const [ projectData, setProjectData ] = useState(project_data);
-
 
     const project_name = (e) => {
       setThisProject(e)
@@ -27,7 +28,7 @@ const Gray = () => {
           <FeedProject />
           )}
       }
-      
+
     const handleEcon = () => {
       if(thisProject === 'econtacts') {
         return(
@@ -67,22 +68,30 @@ const Gray = () => {
   <div className="columns__gray col-span-2">
         <div className="gray__content">
       {/* FEED */}
-          <div className="project"
-          onMouseEnter={ (e) => {project_name('feed')} }
-          onMouseLeave={ (e) => {project_name(null)} }>
+          <div className="project">
+            <p>Feed</p>
+            <div className="project__img" 
+              onMouseEnter={ (e) => {project_name('feed')} }
+              onMouseLeave={ (e) => {project_name(null)} }>
             {handleFeed()}
+            </div>
           </div>
       {/* ECONTACTS */}
-          <div className="project" 
-            onMouseEnter={ (e) => {project_name('econtacts')} }
-            onMouseLeave={ (e) => {project_name(null)} }>
+          <div className="project">
+            <p>E-Contacts</p>
+            <div className="project__img" 
+              onMouseEnter={ (e) => {project_name('econtacts')} }
+              onMouseLeave={ (e) => {project_name(null)} } >
             {handleEcon()}
+            </div>
           </div>
       {/* ERROR SNAKE */}    
-          <div className="project"
-            onMouseEnter={ (e) => {project_name('errorsnake')} }
-            onMouseLeave={ (e) => {project_name(null)} }>
+          <div className="project">
+            <div className="project__img" 
+              onMouseEnter={ (e) => {project_name('errorsnake')} }
+              onMouseLeave={ (e) => {project_name(null)} }>
             {handleSnake()}
+            </div>
           </div>
       {/* SG ASSESSMENT */}    
           <div className=" project"
