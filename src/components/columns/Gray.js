@@ -1,117 +1,100 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './columns.scss';
+import ProjectInfo from '../switches/ProjectInfo'
+import { FeedProject, EconProject, AssessmentProject, ErrorSnakeProject } from '../switches/Projects'
+import project_data from '../switches/project-data'
 
-  //Assets
-import feed from '../../assets/feed.png'
-import econtacts from '../../assets/econtacts.png'
-import sg from '../../assets/assessment.png'
-import error from '../../assets/error_snake.png'
 
-const Gray = ({ projectName }) => {
+const Gray = () => {
+
+    const [ thisProject, setThisProject ] = useState(null);
+    const [ projectData, setProjectData ] = useState(project_data);
+
+
+    const project_name = (e) => {
+      setThisProject(e)
+
+    }
+
+    const handleFeed = () => {
+      if(thisProject === 'feed') {
+        return(
+          <ProjectInfo
+           container_project={thisProject} />
+            )}
+        if(thisProject !== 'feed') {
+          return(
+          <FeedProject />
+          )}
+      }
+      
+    const handleEcon = () => {
+      if(thisProject === 'econtacts') {
+        return(
+          <ProjectInfo
+           container_project={thisProject} />
+            )}
+        if(thisProject !== 'econtacts') {
+          return(
+          <EconProject />
+          )}
+      }
+    const handleSnake = () => {
+      if(thisProject === 'errorsnake') {
+        return(
+          <ProjectInfo
+           container_project={thisProject} />
+            )}
+        if(thisProject !== 'errorsnake') {
+          return(
+          <ErrorSnakeProject />
+          )}
+      }
+    const handleSG = () => {
+      if(thisProject === 'assessment') {
+        return(
+          <ProjectInfo
+           container_project={thisProject} />
+            )}
+        if(thisProject !== 'assessment') {
+          return(
+          <AssessmentProject />
+          )}
+      }
 
   return (
-    <div className="columns__gray col-span-2">
-      <div className="gray__content">
-    {/* FEED */}
-        <div className="project"
-          // onClick={ (e) => {projectName('feed')} }
-          >
-          <div className="project__img">
-          <img className="project_scn" src={feed} alt="feed_alt"
-            />
+    
+  <div className="columns__gray col-span-2">
+        <div className="gray__content">
+      {/* FEED */}
+          <div className="project"
+          onMouseEnter={ (e) => {project_name('feed')} }
+          onMouseLeave={ (e) => {project_name(null)} }>
+            {handleFeed()}
           </div>
-        </div>
-    {/* ECONTACTS */}
-        <div className="project" 
-          // onClick={ (e) => {projectName('e-contacts')} }
-          >
-        <div className="project__img">
-            <img className="project_scn" src={econtacts} alt="econtacts_alt" />
-        </div>
-        </div>
-    {/* ERROR SNAKE */}    
-        <div className="project">
-          {/* <a className="err__lnk" 
-            href="https://silly-elion-9ad6dd.netlify.app/"
-            onMouseEnter={ (e) => {projectName('error snake 98')} }
-            onMouseLeave={ (e) => {projectName(null)} }
-            > */}
-          <div className="project__img">
-
-            <img className="project_scn" src={error} alt="error_alt" />
+      {/* ECONTACTS */}
+          <div className="project" 
+            onMouseEnter={ (e) => {project_name('econtacts')} }
+            onMouseLeave={ (e) => {project_name(null)} }>
+            {handleEcon()}
           </div>
-          {/* </a> */}
-        </div>
-    {/* SG ASSESSMENT */}    
-        <div className=" project">
-          {/* <a className="sg-ui" 
-            href="https://github.com/tm4gtchi/sg-client"
-            onMouseEnter={ (e) => {projectName('technical assessment - studio graphene')} }
-            onMouseLeave={ (e) => {projectName(null)} }
-            > */}
-            <div className="project__img">
-            <img className="project_scn" src={sg} alt="sg_alt" />                      </div>
-          {/* </a> */}
+      {/* ERROR SNAKE */}    
+          <div className="project"
+            onMouseEnter={ (e) => {project_name('errorsnake')} }
+            onMouseLeave={ (e) => {project_name(null)} }>
+            {handleSnake()}
+          </div>
+      {/* SG ASSESSMENT */}    
+          <div className=" project"
+              onMouseEnter={ (e) => {project_name('assessment')} }
+              onMouseLeave={ (e) => {project_name(null)} }>
+                {handleSG()}
+          </div>
         </div>
       </div>
-    </div>
-    );
+      );
+
 }
 
 export default Gray;
 
-// const Gray = ({ projectName }) => {
-
-//   return (
-//     <div className="columns__gray col-span-3">
-//       <h1 className="projects__title">projects</h1>
-//       <div className="gray__content grid-rows-3 gap-4">
-//     {/* FEED */}
-//         <div className="project">
-//           <a className="feed__lnk" 
-//             href="http://feed-app-io.herokuapp.com/" 
-//             onMouseEnter={ (e) => {projectName('feed')} }
-//             onMouseLeave={ (e) => {projectName(null)} } >
-//             <img className="feed__img" src={feed} alt="feed_alt" />
-//           </a>
-//         </div>
-//     {/* ECONTACTS */}
-//         <div className="project">
-//           <a className="econ__lnk" 
-//             href="https://priceless-curran-b897b6.netlify.app/"
-//             onMouseEnter={ (e) => {projectName('e-contacts')} }
-//             onMouseLeave={ (e) => {projectName(null)} }>
-//             <img className="econ__img" src={econtacts} alt="econtacts_alt" />
-//           </a>
-//         </div>
-//     {/* ERROR SNAKE */}    
-//         <div className="project">
-//           <a className="err__lnk" 
-//             href="https://silly-elion-9ad6dd.netlify.app/"
-//             onMouseEnter={ (e) => {projectName('error snake 98')} }
-//             onMouseLeave={ (e) => {projectName(null)} }>
-//             <img className="err__img" src={error} alt="error_alt" />
-//           </a>
-//         </div>
-//     {/* snail.eml */}    
-//         {/* <div className=" project">
-//           <a className="snail__lnk" 
-//             href="https://github.com/tm4gtchi/eml-xp-server"
-//             onMouseEnter={ (e) => {projectName('snail')} }
-//             onMouseLeave={ (e) => {projectName(null)} }>
-//             <div className="snail__img">no photo</div>
-//           </a>
-//         </div> */}
-//     {/* SG ASSESSMENT */}    
-//         <div className=" project">
-//           <a className="sg-ui" 
-//             href="https://github.com/tm4gtchi/sg-client"
-//             onMouseEnter={ (e) => {projectName('technical assessment - studio graphene')} }
-//             onMouseLeave={ (e) => {projectName(null)} }>
-//             <img className="sg__img" src={sg} alt="sg_alt" />
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-//     );
-// }

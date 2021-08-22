@@ -1,23 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import './columns.scss';
 
 //Child Components
-import Project from '../switches/ProjectInfo'
 import Contact from '../text/Contact';
 import About from '../switches/About'
 
 const Green = ({ main_state, block_status, block_func }) => {
 
-  const [ greenRender, setGreenRender ] = useState(false);
 
-  useEffect(() => {
-      const greenRender = () => {
-        setGreenRender(true)
-      }
-    greenRender();
-  }, []);
 
   const renderGreenColumn = () => {
     return (
@@ -26,11 +18,6 @@ const Green = ({ main_state, block_status, block_func }) => {
           <Contact 
             block_status={block_status} 
             block_func={block_func} />
-          <Project 
-            green_state={main_state}
-            block_status={block_status}
-            parent_render={greenRender}
-            />
           <Switch>
             <Route exact path="/about" render={(props) => {
               return <About {...props}  

@@ -4,40 +4,37 @@ import project_data from './project-data';
 
 import '../text/text.scss'
 
-const Project = ({ green_state, block_status, parent_render }) => {
+const ProjectInfo = ({ container_project }) => {
 
-  const [ projectData, setProjectData ] = useState();
-  const [ showProject, setShowProject ] = useState(false);
+  const [ projectData, setProjectData ] = useState(project_data);
+  const [ projectName, setProjectName ] = useState(container_project);
+  const [ transition, setTransition ] = useState(false);
 
   useEffect(() => {
       const handleStates = () => {
-        const data = Object.values(project_data);
-        setProjectData(data);
-        if(green_state) {
-          setShowProject(true)
+        if(container_project) {
+          setTransition(true)
         } else {
-          setShowProject(false)
+          setTransition(false)
         }
       }
     handleStates();
-  }, [green_state]);
+  }, [container_project]);
 
   const renderProjectInfo = () => {
-    if(!green_state || block_status) {
-      return(
-        <div></div>
-      )} 
-    if(green_state && parent_render) {
-      const project = projectData.filter((the) => the.title === green_state)[0];
+    if(container_project) {
+      // handleStates();
+      // console.log(projectData);
+      const project = projectData.filter((the) => the.title === projectName)[0];
      return( 
        <CSSTransition
-        in={showProject}
+        in={transition}
         timeout={300}
         unmountOnExit
         classNames="item"
         >
         <div className="project-info__main">
-            <h4 className="project-info__title">{project.title}</h4>
+            <h4 className="project-info__title">{project.name}</h4>
              <div className="project-info__blurb">
               <p className="project-info__description">{project.description}</p>
              </div>
@@ -57,5 +54,5 @@ const Project = ({ green_state, block_status, parent_render }) => {
   );
 }
 
-export default Project;
+export default ProjectInfo;
 

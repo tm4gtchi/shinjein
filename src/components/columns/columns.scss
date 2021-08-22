@@ -13,8 +13,8 @@
     @extend .columns;
     position: relative;
     background-color: rgba(255, 255, 255, 0.646);
-    border-left: 1px rgba(81, 146, 59, 0.698) solid;
     border-right: 1px rgba(159, 195, 146, 0.349) solid;
+
   }
 
 }
@@ -32,6 +32,7 @@
 
 
 .project {
+
   background-color: white;
   border-bottom: 1px  rgba(159, 195, 146, 0.349) solid;
   height: 50vh;
@@ -41,7 +42,8 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    align-items: center
+    align-items: center;
+    
   }
 
 }
