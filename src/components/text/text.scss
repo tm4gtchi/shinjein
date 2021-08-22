@@ -30,6 +30,7 @@
     color: #15743351;
     font-weight: bold;
     padding-bottom: 1rem;
+    
   }
 
   &__blurb {
@@ -76,18 +77,19 @@
   &__main {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    position: sticky;
+    pointer-events: none;
+    align-content: center;
   }
 
+  
   &__heading { 
     font-weight: 200;
-    position: absolute;
-    top: 0;
-    left: 1vw;
-    padding-top: 1vh;
-    padding-right: 2vh;
-    text-align: left;
+    position: sticky;
   }
 
   &__details {
@@ -97,6 +99,17 @@
     position: absolute;
     padding-bottom: 1vh;
 
+  }
+
+  &__title {
+    line-height: 1.1;
+    max-width: 400px;
+    letter-spacing: -2px;
+    span {
+      display: block;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
   }
 
   &__ul {
