@@ -1,56 +1,253 @@
-// Green and Gray columns
-.columns {
-  height: 100vh;
+/////////////////////////// Temporary ///////////////////////////
 
+
+/// poly-fluid-sizing
+/// Generate linear interpolated size values through multiple break points
+/// @param $property - A string CSS property name
+/// @param $map - A SASS map of viewport unit and size value pairs
+/// @requires function linear-interpolation
+/// @requires function map-sort
+/// @example
+///   @include poly-fluid-sizing('font-size', (576px: 22px, 768px: 24px, 992px: 34px));
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@mixin poly-fluid-sizing($property, $map) {
+  // Get the number of provided breakpoints
+  $length: length(map-keys($map));
+  
+  // Error if the number of breakpoints is < 2
+  @if ($length < 2) {
+    @error "poly-fluid-sizing() $map requires at least values"
+  }
+
+  // Sort the map by viewport width (key)
+  $map: map-sort($map);
+  $keys: map-keys($map);
+
+  // Minimum size
+  #{$property}: map-get($map, nth($keys,1));
+  
+  // Interpolated size through breakpoints
+  @for $i from 1 through ($length - 1) {
+    @media (min-width:nth($keys,$i)) {
+      #{$property}: linear-interpolation((nth($keys,$i): map-get($map, nth($keys,$i)), nth($keys,($i+1)): map-get($map, nth($keys,($i + 1)))));
+    }
+  }
+  
+  // Maxmimum size
+  @media (min-width:nth($keys,$length)) {
+    #{$property}: map-get($map, nth($keys,$length));
+  }
+}
+
+/// linear-interpolation
+/// Calculate the definition of a line between two points
+/// @param $map - A SASS map of viewport widths and size value pairs
+/// @returns A linear equation as a calc() function
+/// @example
+///   font-size: linear-interpolation((320px: 18px, 768px: 26px));
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function linear-interpolation($map) {
+  $keys: map-keys($map);
+  @if (length($keys) != 2) {
+    @error "linear-interpolation() $map must be exactly 2 values";
+  }
+  // The slope
+  $m: (map-get($map, nth($keys, 2)) - map-get($map, nth($keys, 1)))/(nth($keys, 2) - nth($keys,1));
+  
+  // The y-intercept
+  $b: map-get($map, nth($keys, 1)) - $m * nth($keys, 1);
+  
+  // Determine if the sign should be positive or negative
+  $sign: "+";
+  @if ($b < 0) {
+    $sign: "-";
+    $b: abs($b);
+  }
+  
+  @return calc(#{$m*100}vw #{$sign} #{$b});
+}
+
+/// list-sort
+/// Sort a SASS list
+/// @param $list - A SASS list
+/// @returns A sorted SASS list
+/// @requires function list-remove
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function list-sort($list) {
+  $sortedlist: ();
+  @while length($list) > 0 {
+    $value: nth($list,1);
+    @each $item in $list {
+      @if $item < $value {
+        $value: $item;
+      }
+    }
+    $sortedlist: append($sortedlist, $value, 'space');
+    $list: list-remove($list, index($list, $value));
+  }
+  @return $sortedlist;
+}
+
+/// map-sort
+/// Sort map by keys
+/// @param $map - A SASS map
+/// @returns A SASS map sorted by keys
+/// @requires function list-sort
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function map-sort($map) {
+  $keys: list-sort(map-keys($map));
+  $sortedMap: ();
+  @each $key in $keys {
+    $sortedMap: map-merge($sortedMap, ($key: map-get($map, $key)));
+  }
+  @return $sortedMap;
+}
+
+/// list-remove
+/// Remove an item from a list
+/// @param $list - A SASS list
+/// @param $index - The list index to remove
+/// @returns A SASS list
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function list-remove($list, $index) {
+  $newList: ();
+  @for $i from 1 through length($list) {
+    @if $i != $index {
+      $newList: append($newList, nth($list,$i), 'space');
+    }
+  }
+  @return $newList;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Fonts
+@font-face {
+  font-family: 'jakarta-medium';
+  src:  url('/assets/fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
+        url('/assets/fonts/PlusJakartaSans-Medium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'jakarta-bold';
+  src:  url('/assets/fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+        url('/assets/fonts/PlusJakartaSans-Bold.woff') format('woff');
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: jakarta-bold;
+}
+h1 {
+  font-size: 69px;
+}
+h2 {
+  font-size: 52px;
+}
+h3 {
+  font-size: 39px;
+}
+h4 {
+  font-size: 29px;
+}
+h5 {
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 69px;
+  @include poly-fluid-sizing('font-size', (320px: 29px, 1440: 69px, 1600px: 120px));
+  margin-top: -80px;
+}
+
+h1 span {
+  font-size: 29px;
+  
+}
+
+p, span {
+  font-family: jakarta-medium;
+}
+
+
+
+
+/////////////////////////// Temporary ///////////////////////////
+
+
+
+// Green and Gray columns
+
+
+
+.columns {
   &__gray {
     @extend .columns;
-    overflow: scroll;
-    overflow-x: hidden;
+    // overflow: scroll;
+    // overflow-x: hidden;
 
   }
 
   &__green {
     @extend .columns;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.646);
-    border-right: 1px rgba(159, 195, 146, 0.349) solid;
-
   }
 
 }
 
+.green {
+  &__content {
+    position: sticky;
+    top: 0;
+  }
+}
 .gray {
-
   &__content {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    max-width: 40vw;
+    &__title {
+      padding: 10vh 0 40px;
+    }
   }
 
 }
 
 
 .project {
-
   background-color: white;
-  border-bottom: 1px  rgba(159, 195, 146, 0.349) solid;
-  height: 50vh;
   width: 100%;
-
+  margin-bottom: 40px;
+  min-height: 420px;
+  height: 100%;
+  max-width: 800px;
   &__img {
     display: flex;
-    justify-content: center;
     height: 100%;
     align-items: center;
-    
+    width: 100%;
+
+    & > div {
+      display: flex;
+    }
   }
 
+  h5 {
+    padding: 24px 0;
+  }
 }
 
 .project_scn {
   display: flex;
-  max-width: 80%;
-
-
 }

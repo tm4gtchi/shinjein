@@ -37,12 +37,12 @@ const About = () => {
             </a>
             <a href="https://www.linkedin.com/in/jeein-shin/"><li className="click_me">linkedin</li></a>
           </ul>
-          <NavLink className="click_me" to="/"
->
+          {/* <NavLink className="click_me" to="/"
+              onClick={ (e) => {block_func(false)} }>
             <p className="about__home">
               go back
             </p>
-          </NavLink>
+          </NavLink> */}
         </div>
       </CSSTransition>
       );

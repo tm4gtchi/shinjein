@@ -26,10 +26,8 @@ const ProjectInfo = ({ container_project }) => {
       const project = projectData.filter((the) => the.title === container_project)[0];
      return( 
         <div className="project-info__main">
-             <div className="project-info__blurb">
-              <p className="project-info__description">{project.description}</p>
-             </div>
-              <p className="project-info__text">{project.features}</p>
+          <p className="project-info__description">{project.description}</p>
+          <p className="project-info__tech">{project.technologies}</p>
         </div>
       )
     }}
