@@ -166,7 +166,7 @@ h5 {
 
 h1 {
   font-size: 69px;
-  @include poly-fluid-sizing('font-size', (320px: 9px, 1440: 96px, 1600px: 120px));
+  @include poly-fluid-sizing('font-size', (320px: 29px, 1440: 96px, 1600px: 120px));
 
 }
 
@@ -227,7 +227,6 @@ p, span {
 
 .project {
   background-color: white;
-  border-bottom: 1px  rgba(159, 195, 146, 0.349) solid;
   width: 100%;
   margin-bottom: 80px;
   min-height: 480px;
