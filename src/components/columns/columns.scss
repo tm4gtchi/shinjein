@@ -166,7 +166,7 @@ h5 {
 
 h1 {
   font-size: 69px;
-  @include poly-fluid-sizing('font-size', (320px: 29px, 1440: 96px, 1600px: 120px));
+  @include poly-fluid-sizing('font-size', (320px: 29px, 1440: 93px, 1600px: 120px));
 
 }
 
@@ -217,6 +217,7 @@ p, span {
     flex-direction: column;
     align-items: flex-start;
     max-width: 40vw;
+    padding-left: 5vw;
     &__title {
       padding: 10vh 0;
     }
