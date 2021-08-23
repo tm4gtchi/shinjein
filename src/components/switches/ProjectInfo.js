@@ -25,22 +25,12 @@ const ProjectInfo = ({ container_project }) => {
     if(container_project) {
       const project = projectData.filter((the) => the.title === container_project)[0];
      return( 
-       <CSSTransition
-        in={transition}
-        timeout={600}
-        unmountOnExit
-        classNames="item"
-        >
         <div className="project-info__main">
-            <h4 className="project-info__title">{project.name}</h4>
              <div className="project-info__blurb">
               <p className="project-info__description">{project.description}</p>
              </div>
               <p className="project-info__text">{project.features}</p>
-              <p className="project-info__text">{project.design}</p>
-              <p className="project-info__tech">{project.technologies}</p>
         </div>
-       </CSSTransition>
       )
     }}
 

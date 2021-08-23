@@ -10,96 +10,38 @@ import {
 
 const Gray = () => {
 
-    const [ thisProject, setThisProject ] = useState(null);
-
-    const project_name = (e) => {
-      setThisProject(e)
-
-    }
-
-    const handleFeed = () => {
-      if(thisProject === 'feed') {
-        return(
-          <ProjectInfo
-           container_project={thisProject} />
-            )}
-        if(thisProject !== 'feed') {
-          return(
-          <FeedProject />
-          )}
-      }
-
-    const handleEcon = () => {
-      if(thisProject === 'econtacts') {
-        return(
-          <ProjectInfo
-           container_project={thisProject} />
-            )}
-        if(thisProject !== 'econtacts') {
-          return(
-          <EconProject />
-          )}
-      }
-    const handleSnake = () => {
-      if(thisProject === 'errorsnake') {
-        return(
-          <ProjectInfo
-           container_project={thisProject} />
-            )}
-        if(thisProject !== 'errorsnake') {
-          return(
-          <ErrorSnakeProject />
-          )}
-      }
-    const handleSG = () => {
-      if(thisProject === 'assessment') {
-        return(
-          <ProjectInfo
-           container_project={thisProject} />
-            )}
-        if(thisProject !== 'assessment') {
-          return(
-          <AssessmentProject />
-          )}
-      }
-
   return (
     
   <div className="columns__gray col-span-2">
         <div className="gray__content">
       {/* FEED */}
           <div className="project">
-            <p>Feed</p>
-            <div className="project__img" 
-              onMouseEnter={ (e) => {project_name('feed')} }
-              onMouseLeave={ (e) => {project_name(null)} }>
-            {handleFeed()}
+            <div className="project__img">
+              <FeedProjectdf
             </div>
           </div>
       {/* ECONTACTS */}
           <div className="project">
             <p>E-Contacts</p>
-            <div className="project__img" 
-              onMouseEnter={ (e) => {project_name('econtacts')} }
-              onMouseLeave={ (e) => {project_name(null)} } >
-            {handleEcon()}
+            <div className="project__img" >
+
             </div>
           </div>
       {/* ERROR SNAKE */}    
           <div className="project">
-            <div className="project__img" 
-              onMouseEnter={ (e) => {project_name('errorsnake')} }
-              onMouseLeave={ (e) => {project_name(null)} }>
-            {handleSnake()}
+            <p>Error Snake 98</p>
+            <div className="project__img" >
+
             </div>
           </div>
       {/* SG ASSESSMENT */}    
-          <div className=" project"
-              onMouseEnter={ (e) => {project_name('assessment')} }
-              onMouseLeave={ (e) => {project_name(null)} }>
-                {handleSG()}
-          </div>
+          <div className=" project">
+            <p>UI assessment</p>
+            <div className="project__img">
+
+            </div>
         </div>
+      </div>
       </div>
       );
 
