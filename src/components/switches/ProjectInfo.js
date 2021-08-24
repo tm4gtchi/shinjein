@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
 import project_data from './project-data';
+import TechSVG from './TechLogos'
 
 import '../text/text.scss'
 
@@ -27,15 +28,15 @@ const ProjectInfo = ({ container_project }) => {
      return( 
         <div className="project-info__main">
           <p className="project-info__description">{project.description}</p>
-          <p className="project-info__tech">{project.technologies}</p>
+          <TechSVG project_tech={container_project}/>
         </div>
       )
     }}
 
   return(
-    <div>
+    <>
       {renderProjectInfo()}
-    </div>
+    </>
 
   );
 }

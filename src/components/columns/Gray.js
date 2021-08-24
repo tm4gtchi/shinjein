@@ -10,12 +10,11 @@ import {
 
 const Gray = () => {
 
-<<<<<<< HEAD
-=======
     const [ thisProject, setThisProject ] = useState(null);
 
     const project_name = (e) => {
-      setThisProject(e)
+      setThisProject(e);
+
 
     }
 
@@ -39,7 +38,6 @@ const Gray = () => {
             )}
         if(thisProject !== 'econtacts') {
           return(
-          // <EconProject />
           <EconProject />
           )}
       }
@@ -66,7 +64,6 @@ const Gray = () => {
           )}
       }
 
->>>>>>> f84cf16924f889ef9d740f9c044f325fce3d2d60
   return (
     
   <div className="columns__gray col-span-2">
@@ -74,46 +71,39 @@ const Gray = () => {
           <h3 class="gray__content__title">My Projects</h3>
       {/* FEED */}
           <div className="project">
-<<<<<<< HEAD
-            <div className="project__img">
-              <FeedProjectdf
-=======
             <h5>Feed</h5>
             <div className="project__img" 
               onMouseEnter={ (e) => {project_name('feed')} }
-              //onMouseLeave={ (e) => {project_name(null)} }
+              onMouseLeave={ (e) => {project_name(null)} }
               >
             {handleFeed()}
->>>>>>> f84cf16924f889ef9d740f9c044f325fce3d2d60
             </div>
           </div>
       {/* ECONTACTS */}
           <div className="project">
-<<<<<<< HEAD
-            <p>E-Contacts</p>
-            <div className="project__img" >
-
-=======
             <h5>E-Contacts</h5>
             <div className="project__img" 
               onMouseEnter={ (e) => {project_name('econtacts')} }
               onMouseLeave={ (e) => {project_name(null)} } >
             {handleEcon()}
->>>>>>> f84cf16924f889ef9d740f9c044f325fce3d2d60
             </div>
           </div>
-      {/* ERROR SNAKE */}    
+      {/* SG Assessment */}    
           <div className="project">
-            <p>Error Snake 98</p>
-            <div className="project__img" >
-
+            <h5>UI Assessment - Studio Graphene</h5>
+            <div className="project__img" 
+              onMouseEnter={ (e) => {project_name('assessment')} }
+              onMouseLeave={ (e) => {project_name(null)} } >
+              {handleSG()}
             </div>
           </div>
-      {/* SG ASSESSMENT */}    
+      {/* Error snake  */}    
           <div className=" project">
-            <p>UI assessment</p>
-            <div className="project__img">
-
+            <h5>Error Snake 98</h5>
+            <div className="project__img"
+              onMouseEnter={ (e) => {project_name('errorsnake')}}
+              onMouseLeve={ (e) => {project_name(null)} }>
+              {handleSnake()}
             </div>
         </div>
       </div>
