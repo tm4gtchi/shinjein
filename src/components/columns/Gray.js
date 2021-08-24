@@ -15,7 +15,6 @@ const Gray = () => {
     const project_name = (e) => {
       setThisProject(e);
 
-
     }
 
     const handleFeed = () => {
