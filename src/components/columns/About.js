@@ -1,5 +1,5 @@
 import React from 'react';
-import '../switches/switches.scss';
+import '../content/content.scss';
 
 const About = () => {
 
