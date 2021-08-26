@@ -10,6 +10,7 @@ const Contact = () => {
       <div className="contact__heading">
         
         <h1 className="contact__title"><span>Jeein Shin</span>Fullstack Developer </h1>
+        
         <ContactIcons />
 
         <span className="contact__copy"></span>
