@@ -156,7 +156,7 @@ h4 {
   font-size: 29px;
 }
 h5 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 h1 {
@@ -224,6 +224,9 @@ p, span {
   min-height: 480px;
   height: 100%;
   max-width: 800px;
+  padding: 2rem;
+  box-shadow: rgba(161, 176, 207, 0.2) 0px 8px 24px;
+  
 
   &__title {
     display: flex;
@@ -237,9 +240,17 @@ p, span {
     align-items: center;
     width: 100%;
 
+
     & > div {
       display: flex;
     }
+  }
+
+  &__demo {
+    margin-top: 3rem;
+    margin-left: 95%;
+    position: relative;
+
   }
 
   h5 {

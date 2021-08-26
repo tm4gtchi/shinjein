@@ -13,6 +13,8 @@ import { ReactComponent as EconLogo } from '../../assets/econ_logo.svg';
 import { ReactComponent as SGLogo } from '../../assets/sg_logo.svg';
 import { ReactComponent as ErrorLogo } from '../../assets/error_logo.svg';
 
+import open from '../../assets/link_icon.svg'
+
 const Gray = () => {
 
     const [ thisProject, setThisProject ] = useState(null);
@@ -69,31 +71,32 @@ const Gray = () => {
       }
 
   return (
-    
-  <div className="columns__gray col-span-2">
+    <div className="columns__gray col-span-2">
         <div className="gray__content">
           <h3 class="gray__content__title">Projects</h3>
       {/* FEED */}
           <div className="project">
-            <h5 className="project__title">
-              <FeedLogo style={{marginRight: "1rem"}} /> Feed</h5>
-            <div className="project__img" 
-              onMouseEnter={ (e) => {project_name('feed')} }
-              onMouseLeave={ (e) => {project_name(null)} }>
-            {handleFeed()}
-            </div>
+            <h5 className="project__title"> <FeedLogo style={{marginRight: "1rem"}} />
+              Feed
+            </h5>
+              <div className="project__img" 
+                onMouseEnter={ (e) => {project_name('feed')} }
+                onMouseLeave={ (e) => {project_name(null)} }>
+              {handleFeed()}
+              </div>
+            <a href="http://feed-app-io.herokuapp.com/"><img className="project__demo"  src={open} alt="open" /></a>
           </div>
       {/* ECONTACTS */}
           <div className="project">
-            <h5 className="project__title">
-              <EconLogo style={{marginRight: "1rem"}}  />
+            <h5 className="project__title"> <EconLogo style={{marginRight: "1rem"}}  />
               E-Contacts
             </h5>
-            <div className="project__img" 
-              onMouseEnter={ (e) => {project_name('econtacts')} }
-              onMouseLeave={ (e) => {project_name(null)} }>
-            {handleEcon()}
-            </div>
+              <div className="project__img" 
+                onMouseEnter={ (e) => {project_name('econtacts')} }
+                onMouseLeave={ (e) => {project_name(null)} }>
+              {handleEcon()}
+              </div>
+            <a href="https://priceless-curran-b897b6.netlify.app/"><img className="project__demo" src={open} alt="open"/></a>
           </div>
       {/* SG Assessment */}    
           <div className="project">
@@ -106,6 +109,7 @@ const Gray = () => {
               onMouseLeave={ (e) => {project_name(null)} }>
               {handleSG()}
             </div>
+            <a href="https://github.com/tm4gtchi/sg-client"><img className="project__demo"  src={open} alt="open" /></a>
           </div>
       {/* Error snake  */}    
           <div className=" project">
@@ -115,9 +119,10 @@ const Gray = () => {
             </h5>
             <div className="project__img"
               onMouseEnter={ (e) => {project_name('errorsnake')}}
-              onMouseLeve={ (e) => {project_name(null)} }>
+              onMouseLeave={ (e) => {project_name(null)} }>
               {handleSnake()}
             </div>
+          <a href="https://silly-elion-9ad6dd.netlify.app"><img className="project__demo"  src={open} alt="open" /></a>
         </div>
       </div>
       </div>

@@ -20,6 +20,8 @@
 
 .project_scn {
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.116) 0px 1px 4px;
+
 }
 
 .project-info {
@@ -32,41 +34,12 @@
 
     }
 
-  &__title {
-    color: #15743351;
-    font-weight: bold;
-    padding-bottom: 1rem;
-    
-  }
-
-  &__blurb {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
   &__description {
-    font-size: 22px;
-  }
-
-  &__logo {
-    max-width: 50px;
-    margin-right: .8rem;
-    margin-bottom: .8rem;
-    margin-top: .8rem;
+    font-size: 18px;
   }
 
   &__text {
     font-size: 22px;
-  }
-  
-  &__tech {
-    font-size: 11px;
-    letter-spacing: .5px;
-    margin-bottom: 1rem;
-    color:rgba(35, 2, 220, 0.571)
   }
 
 }
