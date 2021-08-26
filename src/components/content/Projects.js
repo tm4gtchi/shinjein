@@ -1,5 +1,5 @@
 import React from 'react';
-import './content.scss.scss';
+import './content.scss';
 
   //Assets
 import feed from '../../assets/feed.png';
