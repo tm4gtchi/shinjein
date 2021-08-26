@@ -232,6 +232,13 @@ p, span {
   min-height: 480px;
   height: 100%;
   max-width: 800px;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
   &__img {
     display: flex;
     height: 100%;

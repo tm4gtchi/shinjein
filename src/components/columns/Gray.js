@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import './columns.scss';
-import ProjectInfo from '../switches/ProjectInfo'
+import ProjectInfo from '../content/ProjectInfo'
 import { 
     FeedProject, 
     EconProject, 
     AssessmentProject, 
     ErrorSnakeProject 
-  } from '../switches/Projects'
+  } from '../content/Projects'
+
+import { ReactComponent as FeedLogo } from '../../assets/feed_logo.svg';
+import { ReactComponent as EconLogo } from '../../assets/econ_logo.svg';
+import { ReactComponent as SGLogo } from '../../assets/sg_logo.svg';
+import { ReactComponent as ErrorLogo } from '../../assets/error_logo.svg';
 
 const Gray = () => {
 
@@ -14,7 +19,6 @@ const Gray = () => {
 
     const project_name = (e) => {
       setThisProject(e);
-
 
     }
 
@@ -68,38 +72,47 @@ const Gray = () => {
     
   <div className="columns__gray col-span-2">
         <div className="gray__content">
-          <h3 class="gray__content__title">My Projects</h3>
+          <h3 class="gray__content__title">Projects</h3>
       {/* FEED */}
           <div className="project">
-            <h5>Feed</h5>
+            <h5 className="project__title">
+              <FeedLogo style={{marginRight: "1rem"}} /> Feed</h5>
             <div className="project__img" 
               onMouseEnter={ (e) => {project_name('feed')} }
-              onMouseLeave={ (e) => {project_name(null)} }
-              >
+              onMouseLeave={ (e) => {project_name(null)} }>
             {handleFeed()}
             </div>
           </div>
       {/* ECONTACTS */}
           <div className="project">
-            <h5>E-Contacts</h5>
+            <h5 className="project__title">
+              <EconLogo style={{marginRight: "1rem"}}  />
+              E-Contacts
+            </h5>
             <div className="project__img" 
               onMouseEnter={ (e) => {project_name('econtacts')} }
-              onMouseLeave={ (e) => {project_name(null)} } >
+              onMouseLeave={ (e) => {project_name(null)} }>
             {handleEcon()}
             </div>
           </div>
       {/* SG Assessment */}    
           <div className="project">
-            <h5>UI Assessment - Studio Graphene</h5>
+            <h5 className="project__title">
+              <SGLogo style={{maxWidth:"30px", maxHeight:"30px", marginRight:"1rem"}}/>
+              UI Assessment - Studio Graphene
+            </h5>
             <div className="project__img" 
               onMouseEnter={ (e) => {project_name('assessment')} }
-              onMouseLeave={ (e) => {project_name(null)} } >
+              onMouseLeave={ (e) => {project_name(null)} }>
               {handleSG()}
             </div>
           </div>
       {/* Error snake  */}    
           <div className=" project">
-            <h5>Error Snake 98</h5>
+            <h5 className="project__title">
+              <ErrorLogo style={{maxWidth:"45px", maxHeight:"40px", marginRight:"1rem"}}/>
+              Error Snake 98
+            </h5>
             <div className="project__img"
               onMouseEnter={ (e) => {project_name('errorsnake')}}
               onMouseLeve={ (e) => {project_name(null)} }>

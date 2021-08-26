@@ -1,25 +1,12 @@
 .project-info {
 
   &__main {
-    @media screen and (max-width: 1000px) {
-      p  {
-        font-size: 11px;
-        line-height: 10px;
-        margin: 0.5rem;
-      }
-    }
-    
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 100;
-    
-    p {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
     }
-
-  }
 
   &__title {
     color: #15743351;

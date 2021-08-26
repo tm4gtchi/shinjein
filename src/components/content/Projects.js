@@ -1,5 +1,5 @@
 import React from 'react';
-import '../columns/columns.scss';
+import './content.scss';
 
   //Assets
 import feed from '../../assets/feed.png';
