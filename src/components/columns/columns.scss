@@ -218,6 +218,7 @@ p, span {
 }
 
 .project {
+  position: relative;
   background-color: white;
   width: 100%;
   margin-bottom: 40px;
@@ -247,9 +248,9 @@ p, span {
   }
 
   &__demo {
-    margin-top: 3rem;
-    margin-left: 95%;
-    position: relative;
+    bottom: 3rem;
+    right: 3rem;
+    position: absolute;
 
   }
 
