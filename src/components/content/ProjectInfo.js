@@ -3,7 +3,7 @@ import React from 'react';
 import project_data from './project-data';
 import TechSVG from './TechLogos'
 
-import '../text/text.scss'
+import './content.scss'
 
 const ProjectInfo = ({ container_project }) => {
 
