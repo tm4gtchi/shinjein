@@ -1,5 +1,7 @@
 import React from 'react';
-import './text.scss';
+import './contact.scss';
+
+import ContactIcons from './ContactIcons';
 
 const Contact = () => {
 
@@ -7,10 +9,11 @@ const Contact = () => {
     <div className="contact__main">
       <div className="contact__heading">
         
-        <h1 className="contact__title"><span>Jeein Shin</span>Fullstack Developer</h1>
+        <h1 className="contact__title"><span>Jeein Shin</span>Fullstack Developer </h1>
+        <ContactIcons />
 
         <span className="contact__copy"></span>
-      
+        
       </div>
     </div>
     );

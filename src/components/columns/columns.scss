@@ -126,11 +126,6 @@
 
 
 
-
-
-
-
-
 // Fonts
 @font-face {
   font-family: 'jakarta-medium';
@@ -193,8 +188,6 @@ p, span {
 .columns {
   &__gray {
     @extend .columns;
-    // overflow: scroll;
-    // overflow-x: hidden;
 
   }
 
@@ -223,7 +216,6 @@ p, span {
   }
 
 }
-
 
 .project {
   background-color: white;
@@ -255,6 +247,3 @@ p, span {
   }
 }
 
-.project_scn {
-  display: flex;
-}
