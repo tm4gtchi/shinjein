@@ -1,5 +1,4 @@
 import React from 'react';
-// import { CSSTransition } from 'react-transition-group';
 import project_data from './project-data';
 import TechSVG from './TechLogos'
 
