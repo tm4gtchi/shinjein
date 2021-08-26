@@ -3,7 +3,6 @@ import '../switches/switches.scss';
 
 const About = () => {
 
-
   const renderAbout = () => {
     return (
         <div className="about__main">

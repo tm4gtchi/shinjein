@@ -1,8 +1,8 @@
 import React from 'react';
-import { ReactComponent as FeedTech } from '../../assets/feed_tech.svg';
-import { ReactComponent as EconTech } from '../../assets/econ_tech.svg';
-import { ReactComponent as SGTech } from '../../assets/sg_tech.svg';
-import { ReactComponent as ErrorTech } from '../../assets/error_tech.svg';
+import { ReactComponent as FeedTech } from '../../assets/tech_feed.svg';
+import { ReactComponent as EconTech } from '../../assets/tech_econ.svg';
+import { ReactComponent as SGTech } from '../../assets/tech_sg.svg';
+import { ReactComponent as ErrorTech } from '../../assets/tech_error.svg';
 
 
 const TechSVG = ({project_tech}) => {
