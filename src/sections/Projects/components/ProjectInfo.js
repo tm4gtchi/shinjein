@@ -1,11 +1,10 @@
 import React from 'react';
 import project_data from './project-data';
-import TechSVG from './TechLogos'
+import TechSVG from './ProjectTech'
 
 import './content.scss'
 
 const ProjectInfo = ({ container_project }) => {
-
 
   const renderProjectInfo = () => {
     if(container_project) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './contact.scss';
+import './styles.scss';
 
 import ContactIcons from './ContactIcons';
 

@@ -1,0 +1,25 @@
+.project_scn {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.116) 0px 1px 4px;
+
+}
+
+.project-info {
+
+  &__main {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+
+  &__description {
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 22px;
+  }
+
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import Github from '../../assets/github.svg';
-import Linkedin from '../../assets/linkedin.svg';
-// import Email from '../../assets/mi_email.svg';
+import Github from '../../../assets/github.svg';
+import Linkedin from '../../../assets/linkedin.svg';
+// import Email from '../../../assets/mi_email.svg';
 
-import './contact.scss'
+import './styles.scss'
 
 const ContactIcons = () => {
 

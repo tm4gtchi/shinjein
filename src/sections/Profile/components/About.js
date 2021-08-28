@@ -1,5 +1,5 @@
 import React from 'react';
-import '../content/content.scss';
+import './styles.scss';
 
 const About = () => {
 
@@ -8,9 +8,9 @@ const About = () => {
         <div className="about__main">
           <div>
             <p className="about__blurb"> 
-              My ongoing curiosity for language, form, and space are what led me to software development.
-              Since then, I've been building, learning, and designing using react and node mostly, but interested in really anything 
-              related to the field. 
+              My continous interest in language, form, and space are what led me to programming.
+              Since then, I've been building projects using react and node, but curious
+              to learn about other types of languages and design practices in the future. 
             </p>   
           </div>         
         </div>

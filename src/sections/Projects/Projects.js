@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import './columns.scss';
-import ProjectInfo from '../content/ProjectInfo'
-import { 
-    FeedProject, 
-    EconProject, 
-    AssessmentProject, 
-    ErrorSnakeProject 
-  } from '../content/Projects'
+import '../sections.scss';
 
+import ProjectInfo from './components/ProjectInfo'
+import { FeedProject, EconProject, AssessmentProject, ErrorSnakeProject } from './components/ProjectImg'
 import { ReactComponent as FeedLogo } from '../../assets/feed_logo.svg';
 import { ReactComponent as EconLogo } from '../../assets/econ_logo.svg';
 import { ReactComponent as SGLogo } from '../../assets/sg_logo.svg';
@@ -15,7 +10,7 @@ import { ReactComponent as ErrorLogo } from '../../assets/error_logo.svg';
 
 import open from '../../assets/link_icon.svg'
 
-const Gray = () => {
+const Projects = () => {
 
     const [ thisProject, setThisProject ] = useState(null);
 
@@ -130,5 +125,5 @@ const Gray = () => {
 
 }
 
-export default Gray;
+export default Projects;
 

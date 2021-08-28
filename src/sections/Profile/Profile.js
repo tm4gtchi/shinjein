@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './columns.scss';
+import '../sections.scss';
 
 //Child Components
-import Contact from '../contact/Contact';
+import Contact from './components/Contact';
 
 const Green = () => {
 
