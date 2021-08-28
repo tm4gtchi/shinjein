@@ -5,14 +5,12 @@ import '../sections.scss';
 //Child Components
 import Contact from './components/Contact';
 
-const Green = () => {
+const Profile = () => {
 
   return(
     <div className="grid columns__green col-span-2  md:block">
       <div className="green__content">
-
-        <Contact />
-        
+        <Contact />        
       </div>
 
     </div> 
@@ -20,4 +18,4 @@ const Green = () => {
 }
 
 
-export default Green;
+export default Profile;

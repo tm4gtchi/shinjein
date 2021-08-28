@@ -24,13 +24,13 @@ const Projects = () => {
         return(
           <ProjectInfo
            container_project={thisProject} />
+
             )}
         if(thisProject !== 'feed') {
           return(
           <FeedProject />
           )}
       }
-
     const handleEcon = () => {
       if(thisProject === 'econtacts') {
         return(
@@ -79,7 +79,7 @@ const Projects = () => {
                 onMouseLeave={ (e) => {project_name(null)} }>
               {handleFeed()}
               </div>
-            <a href="http://feed-app-io.herokuapp.com/"><img className="project__demo"  src={open} alt="open" /></a>
+            <a href="http://feed-app-io.herokuapp.com/"><img className="project__demo" src={open} alt="open" /></a>
           </div>
       {/* ECONTACTS */}
           <div className="project">

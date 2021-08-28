@@ -1,46 +1,20 @@
-.about {
-  &__main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 10vh;
-    max-width: 80%;
-    height: 50vh;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-    font-weight: 300;
-    font-size: 13px;
-    color: gray
-  }
-
-}
-
 .contact {
 
-  &__main {
+  &__main {  
+    margin-left: 10vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    display: flex;
     position: sticky;
-    align-content: center;
+    align-content:center;
   }
 
   
   &__heading { 
     font-weight: 200;
     position: sticky;
-  }
-
-  &__details {
-    margin-top: 1rem;
-    width: 20%;
-    font-weight: 200;
-    position: absolute;
-    padding-bottom: 1vh;
 
   }
 
@@ -54,6 +28,15 @@
       margin-bottom: 10px;
     }
   
+  }
+
+  &__blurb {
+    max-width: 60%;
+    margin-top: 3vh;
+    text-align: justify;
+    font-weight: 300;
+    font-size: 13px;
+    color: gray
   }
 
     &__icons {
